@@ -14,7 +14,7 @@ app.get("/",(request,response)=>{
     response.send("Hi ... This Vijay💚🥰💜")
 })
 
-app.get("/timestamp",(request,response)=>{
+app.get("/TimeStamp",(request,response)=>{
 
 let time=new Date();
 let date=time.toUTCString().slice(0,-4)
@@ -26,7 +26,7 @@ console.log(date)
 
 // }
 
-const timestamp = `LastUpdated TimeStamps:${date}`
+const timestamp = `The url:(http://localhost:3010/TimeStamp) LastUpdated TimeStamps:${date}`
     fs.writeFileSync(`${dirPath}/date-time.txt`,timestamp,(err,data)=>{
         if(err){
             console.log(err)
